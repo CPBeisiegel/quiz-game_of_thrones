@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/game.css">
     <title>Quiz - Play Game</title>
 </head>
 <body>
+    <div class = "container">
+        <div id = "game" class = "justify-content flex-column">
+            <div id = "game-box">
+                <div class = "item">
+                    <p id="textProgress" class="item-progress">
+                        Pergunta
+                    </p>
+                    <div id = "progressBar">
+                        <div id = "progressFull"></div>
+                    </div>
+                </div>
+                <div class = "item">
+                    <p class="item-score">
+                        Pontuação
+                    </p>
+                    <h1 class="item-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+
+            </div>
+
+            <div class="alternatives-container">
+                <h2 id = "question"> Qual seria a pergunta </h2>
+                <button id = "alternative1" class = "btn">
+                    <p id = "guess1">Alternativa</p>
+                </button>
+                <button id = "alternative2" class = "btn">
+                   <p id = "guess2">Alternativa</p>
+               </button>
+               <button id = "alternative3" class = "btn">
+                   <p id = "guess3">Alternativa</p>
+               </button>
+               <button id = "alternative4" class = "btn">
+                   <p id = "guess4">Alternativa</p>
+               </button>
+            </div>
+                    
+        </div>
+    </div>
     
+    <script src="./scripts/game.js"></script>
 </body>
 </html>
