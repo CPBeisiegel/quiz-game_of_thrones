@@ -24,10 +24,11 @@ body {
     padding: 2rem;
  }
 
-h1{
-    font-size: 4rem;
+h2{
+    font-size: 3rem;
     margin-bottom: 3rem;
     font-weight: 500;
+    text-align: left;
 }
 
 .alternatives-container{
@@ -39,6 +40,7 @@ h1{
     background: rgb(32, 32, 233);
     font-size: 1.5rem;
     min-width: 40rem;
+    align-items: center;
 }
 
 .alternatives-container:hover{
@@ -54,8 +56,8 @@ h1{
 }
 
 .alternative-text{
-    padding: 1.5rem;
-    width: 100%;
+    text-align: left;
+    width: 80%;
 }
 
 /* cor para os botões de correto e incorreto */
@@ -79,9 +81,11 @@ h1{
 
 /* Lógica para o display */
 
-#display{
+.display_container{
     display: flex;
     justify-content: space-around;
+    position: relative;
+    top: 85px;
 }
 
 .display-item{

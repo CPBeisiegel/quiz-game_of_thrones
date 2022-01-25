@@ -22,7 +22,7 @@ class Quiz extends Question{
         
     }
 
-    startGame(){
+    start(){
         getCurrentQuestion(questions);
         showScore()
 
@@ -41,11 +41,11 @@ class Quiz extends Question{
     }
 
 
-
     showScore(score,progress){
         // Aqui vou mostrar uma mensagem com o personagem de acordo com o número de alternativas no range 1 - 10 
         getRightAlternatives(score)
-        this.progress = getCurrentQuestion(questions)        
+        this.progress = this.currentQuestionIndex++
+        // entender como eu posso inputar o progresso aqui dentro
     }
 
     endQuiz(){

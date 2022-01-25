@@ -8,43 +8,47 @@
     <title>Quiz - Play Game</title>
 </head>
 <body>
-    <div class = "container">
-        <div id = "quiz" class = "box-container">
-            <div id = "display">
-                <div class = "display-item">
-                    <p id="textProgress" class="item">
-                        Pergunta
-                    </p>
-                    <div id="progressBar">
-                        <div id="progressFull"></div>
-                    </div>
-                </div>
-                <div class = "display-item">
-                    <p class="item">
-                        Pontuação
-                    </p>
-                    <h1 class="item-main-text" id="score">
-                        0
-                    </h1>
-                </div>
 
-            </div>                   
-            <h1 id = "question"> Pergunta </h1>
+    <div id = "display" class="display_container">
+        <div class = "display-item">
+            <p id="textProgress" class="item">
+                Pergunta
+            </p>
+            <div id="progressBar">
+                <div id="progressFull"></div>
+            </div>
+        </div>
+   
+        <div class = "display-item">
+            <p class="item">
+                Pontuação
+            </p>
+            <span class="item-main-text" id="score">
+                0
+            </span>
+        </div>
+
+    </div> 
+    <div class = "container">
+
+        <div id = "quiz" class = "box-container">
+                             
+            <h2 id = "question"> Pergunta </h2>
             <div class = "alternatives-container">
                 <p class = "alternative-option">A</p>
-                <p class = "alternative-text" data-number ="1">Alternativa 1</p>
+                <span class = "alternative-text" data-number ="1">Alternativa 1</span>
             </div>
             <div class = "alternatives-container">
                 <p class = "alternative-option">A</p>
-                <p class = "alternative-text" data-number = "2">Alternativa 2</p>
+                <span class = "alternative-text" data-number = "2">Alternativa 2</span>
             </div>
             <div class = "alternatives-container">
                 <p class = "alternative-option">A</p>
-                <p class = "alternative-text" data-number = "3">Alternativa 3</p>
+                <span class = "alternative-text" data-number = "3">Alternativa 3</span>
             </div>
             <div class = "alternatives-container">
                 <p class = "alternative-option">A</p>
-                <p class = "alternative-text" data-number = "4">Alternativa 4</p>
+                <span class = "alternative-text" data-number = "4">Alternativa 4</span>
             </div>
 
         </div>
