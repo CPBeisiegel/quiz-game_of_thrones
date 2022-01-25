@@ -37,14 +37,14 @@ a.btn{
     margin-bottom: 1rem;
     text-decoration: none;
     color: rgba(28, 26, 26);
-    background: linear-gradient(90deg, rgb(59, 71, 95) 0%, rgb(79, 93, 116) 100%);
+    background: linear-gradient(90deg, rgb(185, 180, 37) 0%, rgb(218, 203, 49) 100%);
     border-radius: 4px;
 
 }
 
 .btn:hover{
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5);
     transition: transform 150ms;
     transform: scale(1.03)
 }
@@ -53,12 +53,4 @@ a.btn{
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
-}
-
-#pontuacao-btn{
-    background: linear-gradient(90deg, rgb(185, 180, 37) 0%, rgb(218, 203, 49) 100%);
-}
-
-#pontuacao-btn:hover{
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5)
 }

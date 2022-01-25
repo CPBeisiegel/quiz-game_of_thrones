@@ -5,6 +5,12 @@
     font-family: 'Nanum Gothic Coding', monospace;
    /*  font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif; */
+    text-align: center;
+}
+
+body {
+    color: white;
+    background: black;
 }
 
 .container{
@@ -14,7 +20,93 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1280px;
     margin: auto;
     padding: 2rem;
  }
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.alternatives-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-radius:4px;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background: rgb(32, 32, 233);
+    font-size: 1.5rem;
+    min-width: 40rem;
+}
+
+.alternatives-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(108, 155, 226, 0.5);
+    transform: scale(1.02);
+    transition: transform 100ms;
+}
+
+.alternative-option{
+    padding: 1.5rem 2.5rem;
+    color: white;
+}
+
+.alternative-text{
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* cor para os botões de correto e incorreto */
+
+.correct{
+    background: linear-gradient(90deg, rgb(rgb(5, 145, 5)) 0%, rgb(rgb(3, 163, 3)) 100%);
+}
+
+.incorrect{
+    background: linear-gradient(90deg, rgb(red) 0%, rgb(red) 100%);
+}
+
+/* Adicionando media */
+
+@media screen and (min-width: 768px){
+    .alternatives-container{
+        min-width: 40rem;
+    }
+    
+}
+
+/* Lógica para o display */
+
+#display{
+    display: flex;
+    justify-content: space-around;
+}
+
+.display-item{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.item-main-text{
+    text-align: center;
+}
+
+
+/* Não esta aparecendo */
+
+#progressBar{
+    width: 25rem;
+    height: 2rem;
+    border: 0.3rem solid #19aa5a;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+}
+
+#progressBarFull{
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
+}
+

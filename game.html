@@ -9,18 +9,18 @@
 </head>
 <body>
     <div class = "container">
-        <div id = "game" class = "justify-content flex-column">
-            <div id = "game-box">
-                <div class = "item">
-                    <p id="textProgress" class="item-progress">
+        <div id = "quiz" class = "box-container">
+            <div id = "display">
+                <div class = "display-item">
+                    <p id="textProgress" class="item">
                         Pergunta
                     </p>
-                    <div id = "progressBar">
-                        <div id = "progressFull"></div>
+                    <div id="progressBar">
+                        <div id="progressFull"></div>
                     </div>
                 </div>
-                <div class = "item">
-                    <p class="item-score">
+                <div class = "display-item">
+                    <p class="item">
                         Pontuação
                     </p>
                     <h1 class="item-main-text" id="score">
@@ -28,26 +28,30 @@
                     </h1>
                 </div>
 
+            </div>                   
+            <h1 id = "question"> Pergunta </h1>
+            <div class = "alternatives-container">
+                <p class = "alternative-option">A</p>
+                <p class = "alternative-text" data-number ="1">Alternativa 1</p>
+            </div>
+            <div class = "alternatives-container">
+                <p class = "alternative-option">A</p>
+                <p class = "alternative-text" data-number = "2">Alternativa 2</p>
+            </div>
+            <div class = "alternatives-container">
+                <p class = "alternative-option">A</p>
+                <p class = "alternative-text" data-number = "3">Alternativa 3</p>
+            </div>
+            <div class = "alternatives-container">
+                <p class = "alternative-option">A</p>
+                <p class = "alternative-text" data-number = "4">Alternativa 4</p>
             </div>
 
-            <div class="alternatives-container">
-                <h2 id = "question"> Qual seria a pergunta </h2>
-                <button id = "alternative1" class = "btn">
-                    <p id = "guess1">Alternativa</p>
-                </button>
-                <button id = "alternative2" class = "btn">
-                   <p id = "guess2">Alternativa</p>
-               </button>
-               <button id = "alternative3" class = "btn">
-                   <p id = "guess3">Alternativa</p>
-               </button>
-               <button id = "alternative4" class = "btn">
-                   <p id = "guess4">Alternativa</p>
-               </button>
-            </div>
-                    
         </div>
+                       
     </div>
+
+  
     
     <script src="./scripts/game.js"></script>
 </body>
