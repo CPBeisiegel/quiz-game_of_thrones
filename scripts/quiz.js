@@ -1,56 +1,78 @@
 // Fazer um classe que vai inserir as alternativas das perguntas e os métodos que vamos aplicar para o jogo 
+//import questions from "./data";
 
-class Question{
-    constructor(text, alternatives, options){
-        this.text = text;
-        this.alternatives = alternatives;
-        this.options = options;
+
+class Quiz {
+
+    constructor(){
+        
+     
+        this.score = 0;
+        this.questionCount = 0;
+        this.availableQuestion = [...questions]
+        this.currentQuestion = {}
+       this.MAX_QUESTIONS = 10;
+       this.SCORE_POINTS = 100;
+
+        
+    }
+
+    start(){
+    
+       this.getNewQuestion();
+
+    }
+
+    
+
+    // Isso vai ser um callback para quando formos pegar as perguntas no arquivo data
+    getNewQuestion(){
+        if(this.availableQuestion.length === 0 || this.questionCount.length >= this.MAX_QUESTIONS){
+            return false
+            
+                 // vai retornar um modal com o personagem
+            /* 
+            
+    <div id="modalPersonagem" class="modalBackground">     <!--  tela preta fundo -->
+        <div class="displayModal">  <!--  aparecer imagem ou botao  -->
+            <img src="images/win.png" alt="Voce [e tal personagem"/>
+        </div> 
+    </div>
+            
+            */}
+
+        this.questionCount++
+         const questionIndex = Math.floor(Math.random() * this.availableQuestion.length);
+        this.currentQuestion = this.availableQuestion[questionIndex];
+  
     }
 
     isCorrectAnswer(alternative){
         return this.alternative === alternative;
     }
 
-}
-
-class Quiz extends Question{
-
-    constructor(text, alternatives, options){
-        super(text, alternatives, options);
-        this.score = 0;
-        this.currentQuestionIndex = 0;
-        
-    }
-
-    start(){
-        getCurrentQuestion(questions);
-        showScore()
-
-    }
-
-    // Isso vai ser um callback para quando formos pegar as perguntas no arquivo data
-    getCurrentQuestion(questions){
-        return this.questions[this.currentQuestionIndex]
-    }
-
     getRightAlternatives(answer){
         if(this.currentQuestion().isCorrectAnswer(answer)){
             this.score++
         }
-        this.currentQuestionIndex++
+        this.questionCount++
     }
 
 
-    showScore(score,progress){
+    incrementScore(score){
         // Aqui vou mostrar uma mensagem com o personagem de acordo com o número de alternativas no range 1 - 10 
         getRightAlternatives(score)
-        this.progress = this.currentQuestionIndex++
+       
         // entender como eu posso inputar o progresso aqui dentro
+        // fazer uma lógica para incrementar o score aqui
     }
 
     endQuiz(){
         return this.currentQuestion >= this.questions.length
+        // preciso retornar o questionCount
     }
 
     
 }
+
+//export {Quiz}
