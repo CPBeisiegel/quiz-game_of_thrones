@@ -25,42 +25,26 @@ class Quiz {
 
     
     getNewQuestion(){
-        if(this.availableQuestion.length === 0 || this.questionCount.length >= this.MAX_QUESTIONS){
-            return false       
+        if(this.availableQuestion.length === 0 ){
+          this.endQuiz()      
    }
 
         this.questionCount++
          const questionIndex = Math.floor(Math.random() * this.availableQuestion.length);
         this.currentQuestion = this.availableQuestion[questionIndex];
+        this.availableQuestion.splice(questionIndex, 1);
   
     }
 
-/*     getCurrentQuestion() {
-        return this.questions[this.currentQuestionIndex];
-      } */
-   /*  isCorrectAnswer(alternative){
-        return this.alternative === alternative;
-    } */
+    nextQuestion(){
+        settimeout(() => {
+            this.getNewQuestion()
+         },3000)
+    }
 
- /*    getRightAlternatives(answer){
-        if(this.currentQuestion().isCorrectAnswer(answer)){
-            this.score++
-        }
-        this.questionCount++
-    } */
-
-
-/*     incrementScore(score){
-        // Aqui vou mostrar uma mensagem com o personagem de acordo com o número de alternativas no range 1 - 10 
-        getRightAlternatives(score)
-       
-        // entender como eu posso inputar o progresso aqui dentro
-        // fazer uma lógica para incrementar o score aqui
-    } */
 
     endQuiz(){
-        return this.currentQuestion >= this.questions.length
-        // preciso retornar o questionCount
+        window.alert("Acabou")
     }
 
     
