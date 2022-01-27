@@ -42,11 +42,19 @@ class Quiz {
          },3000)
     }
 
+    isWonTheGame() {
+        return this.availableQuestion.length === 0 &&  this.MAX_QUESTIONS >= 900
+    }
+
+    isLostTheGame() {
+        return this.availableQuestion.length === 0 && this.MAX_QUESTIONS < 100
+    }
+
 
     endQuiz(){
         window.alert("Acabou")
     }
-
+    
     
 }
 

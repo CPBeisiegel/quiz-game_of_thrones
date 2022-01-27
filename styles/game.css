@@ -100,7 +100,12 @@ h2{
 }
 
 #btnOk{
-    
+    width: 20%;
+    height: 10%;
+    display: flex;
+    background: gray;
+    justify-content: center;
+    align-items: center;
 }
 /* Adicionando media */
 
@@ -146,3 +151,62 @@ h2{
     width: 0%;
 }
 
+/* Modal */
+
+.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(00, 00, 00, 0.5);   
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  e para aparecer o modal de vitoria ou perda */
+.modalBackground.show {
+    display: flex;
+}
+
+
+.displayModal {
+    background: white;
+    min-width: 10%;
+    min-width: 10%;   
+    text-align: center;
+    padding: 35px; 
+    box-shadow: 6px 6px 6px 6px rgba(00, 00, 00, .1);
+}
+
+/* animacao para aparecer o modal de perda ou vitoria */
+
+@keyframes displays {
+    from {
+        opacity: 0;
+        transform:translate3d(0 -60px 0) ;
+    }
+    to {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+
+    }
+}
+
+.show .displayModal {
+    animation: displays .3s;
+}
+ 
+.displayModal button {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: white;
+    background-color:#1157da;
+    box-shadow: 0px 4px 4px 2px rgba(00, 00, 00, .3);
+    border: none;
+    border-radius: 20px;
+    min-width: 50%;
+    height: 35%;
+    cursor: pointer;
+}

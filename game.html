@@ -12,7 +12,7 @@
     <div id = "display" class="display_container">
         <div class = "display-item">
             <p id="textProgress" class="item">
-                Pergunta
+                Pergunta 1 of 10
             </p>
             <div id="progressBar">
                 <div id="progressFull"></div>
@@ -38,11 +38,27 @@
                 <div class="alternatives-container"></div>
                 <div class="alternatives-container"></div>
                 <div class="alternatives-container"></div>
-                <div class="alternatives-container"></div>
-            
+                <div class="alternatives-container"></div> 
+          
             
         </div>
         <button id="btnOk" type="button" class="no-show">Next</button>        
+        <div id="modalPersonagem" class="modalBackground"></div>
+    </div>
+     <!-- Modal de vitória -->
+  <div id="modalPersonagem" class="modalBackground">   
+         <div class="displayModal"> 
+            <img src="./assets/img/arya.jpg" alt="Parábens! Você ganhou!"/> 
+            <button class="btnModal">Jogar Novamente</button>
+         </div>  
+    </div>  
+
+       <!-- Modal de derrota  -->
+       <div id="modalDefeat" class="modalBackground">
+        <div class="display"> 
+            <img src="./assets/img/tyrion.jpg" alt="Tente mais da proxima vez!"/>
+            <button class="btnModal">Tentar Novamente</button>
+        </div> 
     </div>
 
 
