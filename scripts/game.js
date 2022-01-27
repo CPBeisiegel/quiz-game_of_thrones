@@ -80,7 +80,7 @@ choice.addEventListener("click", (event) => {
 
  const qttQuestion = []
 
- 
+ let result = []
 
 
 btnOk.addEventListener("click", () => {
@@ -107,19 +107,25 @@ for(let i = 0; i < alternativeContainer.length; i++){
     alternativeContainer[i].innerHTML = span
 }
 
-
+const div = `<div class="progressFull"></div>`
 progressText.innerText = `Pergunta ${qttQuestion === [] ? 0 : qttQuestion.length+1} of ${quiz.MAX_QUESTIONS}`;
+progressBarFull.insertAdjacentHTML("beforeend", div);
+progressBarFull.style.width = `${(qttQuestion.length/quiz.MAX_QUESTIONS)*100}%`;
 
-progressBarFull.style.width = `${(qttQuestion.length /quiz.MAX_QUESTIONS)*100}%`; 
 
-console.log("AQUIII",qttQuestion)
+result.push(quiz.SCORE_POINTS)
+console.log("==",result);
+
+
 
 }) 
 
 
-const incrementScore = (numScore) => {
-    quiz.score += numScore
+
+let incrementScore = (numScore) => {
+   quiz.score += numScore
     scoreText.innerText = quiz.score
+        
 }
 
 
@@ -151,17 +157,7 @@ const incrementScore = (numScore) => {
 
 
 
-/* if(quiz.SCORE_POINTS >= 1000){
-    const vitoria = `<div class="displayModal"> 
-    <img src="" alt="Voce é tal personagem"/>
-        </div>`
-       return modal.insertAdjacentHTML("beforeend",vitoria)
-} else {
-    const perdeu = `<div class="displayModal"> 
-    <img src="images/win.png" alt="Voce é tal personagem"/>
-        </div>`
-        return modal.insertAdjacentHTML("beforeend", perdeu)
-} */
+
 
 
     // Pega as alternativas, cria o html e as coloca em ordem

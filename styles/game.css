@@ -106,6 +106,7 @@ h2{
     background: gray;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
 }
 /* Adicionando media */
 
@@ -138,17 +139,19 @@ h2{
 /* Não esta aparecendo */
 
 #progressBar{
-    width: 25rem;
+    width: 330px;
     height: 2rem;
     border: 0.3rem solid #19aa5a;
     margin-top: 1.5rem;
     border-radius: 25px;
 }
 
-#progressBarFull{
-    height: 3.4rem;
+#progressFull{
+    height: 22px;
     background-color: #19aa5a;
-    width: 0%;
+    width: 33px;
+    border-radius: 14px;
+    
 }
 
 /* Modal */
