@@ -24,22 +24,10 @@ class Quiz {
     }
 
     
-
-    // Isso vai ser um callback para quando formos pegar as perguntas no arquivo data
     getNewQuestion(){
         if(this.availableQuestion.length === 0 || this.questionCount.length >= this.MAX_QUESTIONS){
-            return false
-            
-                 // vai retornar um modal com o personagem
-            /* 
-            
-    <div id="modalPersonagem" class="modalBackground">     <!--  tela preta fundo -->
-        <div class="displayModal">  <!--  aparecer imagem ou botao  -->
-            <img src="images/win.png" alt="Voce [e tal personagem"/>
-        </div> 
-    </div>
-            
-            */}
+            return false       
+   }
 
         this.questionCount++
          const questionIndex = Math.floor(Math.random() * this.availableQuestion.length);
@@ -47,25 +35,28 @@ class Quiz {
   
     }
 
-    isCorrectAnswer(alternative){
+/*     getCurrentQuestion() {
+        return this.questions[this.currentQuestionIndex];
+      } */
+   /*  isCorrectAnswer(alternative){
         return this.alternative === alternative;
-    }
+    } */
 
-    getRightAlternatives(answer){
+ /*    getRightAlternatives(answer){
         if(this.currentQuestion().isCorrectAnswer(answer)){
             this.score++
         }
         this.questionCount++
-    }
+    } */
 
 
-    incrementScore(score){
+/*     incrementScore(score){
         // Aqui vou mostrar uma mensagem com o personagem de acordo com o número de alternativas no range 1 - 10 
         getRightAlternatives(score)
        
         // entender como eu posso inputar o progresso aqui dentro
         // fazer uma lógica para incrementar o score aqui
-    }
+    } */
 
     endQuiz(){
         return this.currentQuestion >= this.questions.length

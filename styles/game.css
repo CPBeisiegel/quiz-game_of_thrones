@@ -60,6 +60,11 @@ h2{
     width: 80%;
 }
 
+.choicesList{
+    flex-wrap: wrap;
+    
+}
+
 /* cor para os botões de correto e incorreto */
 
 
@@ -127,7 +132,7 @@ h2{
 
 #progressBarFull{
     height: 3.4rem;
-    background-color: #56a5eb;
+    background-color: #19aa5a;
     width: 0%;
 }
 
