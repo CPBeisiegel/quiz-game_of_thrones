@@ -19,13 +19,11 @@ const btnOk = document.getElementById("btnOk");
 const btnWrong = document.getElementById("btnWrong")
 const alternativeContainer = document.getElementsByClassName("alternatives-container")
 
-const showModalVictory = document.getElementById("modalVictory") 
-const showModalDefeat = document.getElementById("modalDefeat")
-const soundVictory = new Audio("./audio/victory_sound.mp3")
-const soundDefaut = new Audio("./audio/defeat_sound.mp3")
+const soundGame = new Audio("./audio/game_audio.mp3")
 
 
 quiz.start();
+soundGame.play();
 
 // Pega a pergunta
 question.innerText = quiz.currentQuestion.text
@@ -114,12 +112,19 @@ progressBarFull.style.width = `${(qttQuestion.length/quiz.MAX_QUESTIONS)*100}%`;
 
 
 result.push(quiz.SCORE_POINTS)
-console.log("==",result);
+console.log("==",result)
 
+/* const resultado = result.map((result, i) => {
+    if(result[i] === 9){
+        return "Seu conhecimento da série é nível Bran"
+    } else if (result <= 7){
+        return "Seu conhecimento da série é nível Tyrion, tente novamente"
+    }
+
+    console.log("=====",resultado) */
 
 
 }) 
-
 
 
 let incrementScore = (numScore) => {
@@ -127,33 +132,6 @@ let incrementScore = (numScore) => {
     scoreText.innerText = quiz.score
         
 }
-
-
-
-
-
-
-
-
-/* function checkGameResult() {
-    // verifica se ganhou ou perdeu o jogo 
-     if (quiz.isWonTheGame()) {
-         showModalVictory.classList.add('show')
-         soundVictory.play()
-         showModalVictory.addEventListener('click',() => {
-             showModalVictory.classList.remove("show")
-             restart()
-         })
-     } else if (game.isLostTheGame()) {
-         showModalDefeat.classList.add('show')
-         soundDefaut.play()
-         showModalDefeat.addEventListener('click',() => {
-             console.log("Showing modal defeat")
-             showModalDefeat.classList.remove("show")
-             restart()
-         })
-     }
- } */
 
 
 

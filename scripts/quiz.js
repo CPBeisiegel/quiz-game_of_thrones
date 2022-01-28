@@ -25,7 +25,7 @@ class Quiz {
 
     
     getNewQuestion(){
-        if(this.availableQuestion.length === 0 ){
+      if(this.availableQuestion.length === 0 ){
           this.endQuiz()      
    }
 
@@ -52,7 +52,7 @@ class Quiz {
 
 
     endQuiz(){
-        window.alert("Acabou")
+        window.alert("Parabéns")
     }
     
     
